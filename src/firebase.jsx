@@ -8,7 +8,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-	apiKey: "AIzaSyC1UZBeNdzdgowHVzzUCsrgHMPN6M55wh4",
+	apiKey: import.meta.env.VITE_REACT_APP_API_KEY,
 	authDomain: "easylease-8876b.firebaseapp.com",
 	projectId: "easylease-8876b",
 	storageBucket: "easylease-8876b.appspot.com",
@@ -21,3 +21,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 getAnalytics(app);
 export const db = getFirestore();
+
+
